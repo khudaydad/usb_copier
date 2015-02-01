@@ -7,7 +7,7 @@
 DEST=/tmp/usb_content
 
 if [ ! -d "${DEST}" ]; then
-    mkdir -p $DEST
+    mkdir -m 777 -p $DEST
 
     while [ 1 ]; do
         USB=`mount | grep -E '/dev/sd.*/media' | cut -d' ' -f3`
